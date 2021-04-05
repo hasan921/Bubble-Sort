@@ -1,26 +1,16 @@
 #include<stdio.h>
-  
-   
-   void sirala(int dizi[],int boyut)
+#include<stdlib.h>  
+ #define n 5  
+ 
+   void sirala(int yon,int dizi[],int i)
    {
-   	   int i,max,min,a,j,b;
-    	printf("\nLutfen bes sayi giriniz : \n");
-    	  
-    	    for(b=0;b<5;b++){
-    	    	printf("%d. sayi : ",b+1);
-    	    	scanf("%d",&dizi[b]);
-    	    	}
-    	    
+   	   int max,min,j,b;
     	
-    	
-    	printf("Kucukten Buyuge siralamak icin 1'i\nBuyukten Kucuge siralamak icin 2'yi tuslayin : ");
-    	scanf("%d",&a);
-		
-    	if (1==a){
+			if (1==yon){
 	
 	for(j=0;j<5;j++)
 	{
-	   for(i=0;i<5;i++)
+	   for(i=0;i<4;i++)
 	 {
 		if(dizi[i]>dizi[i+1])
 		{
@@ -39,9 +29,7 @@
     }
 
   }  
-    
-	
-	  else if(2==a)	{
+   else if(2==yon)	{
     
 		for(j=0;j<5;j++)
 	   {
@@ -72,9 +60,11 @@
    
    int main(){
     	
-    int dizi[5];
- 
-    	sirala(dizi,5);
+    
+      int  dizi[n] ={10,15,23,05,17},a;
+	    printf("kucukten buyuge siralamak icin 1'i\nbuyukten kucuge siralamak icin 2'yi tusla : ");
+        scanf("%d",&a);
+    	sirala(a,dizi,n);
 
     
     
